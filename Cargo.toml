@@ -1,0 +1,18 @@
+[package]
+name = "nvim-jupyter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nvim-rs = "0.4"
+async-trait = "0.1"
+serde_json = "1.0"
+anyhow = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+
+[lib]
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "nvim-jupyter"
+path = "src/main.rs"
